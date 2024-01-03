@@ -11,7 +11,7 @@ const Navbar = async () => {
 
   let role = null;
   if (session && typeof session.user.name === "string") {
-    role = await hasRole(session.user.name);
+    role = await hasRole(session.user.id);
   }
 
   return (
