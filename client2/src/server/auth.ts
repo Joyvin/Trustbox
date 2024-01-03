@@ -45,6 +45,9 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   },
+  theme: {
+    logo: "https://next-auth.js.org/img/logo/logo-sm.png",
+  },
   adapter: PrismaAdapter(db),
   providers: [
     DiscordProvider({
