@@ -1,4 +1,3 @@
-import Navbar from "../_components/Navbar";
 import Verify from "../_components/Verify";
 
 import { getServerAuthSession } from "~/server/auth";
@@ -9,7 +8,6 @@ export default async function Home() {
   if (session) {
     return (
       <>
-        <Navbar />
         <Verify />
       </>
     );

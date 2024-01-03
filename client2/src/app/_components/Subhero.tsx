@@ -4,9 +4,9 @@ import React from 'react'
 const Subhero = () => {
     return (
         <div className='w-[80%] mx-auto py-10'>
-            <div>
+            <div className=''>
             <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-3'>Create a Portfolio of all your Certificates</h1>
-            <div className='grid md:grid-cols-5 grid-cols-2 pb-5 '>
+            <div className='grid md:grid-cols-5 grid-cols-2 pb-10 mb-5 '>
                 <Image src='/certificate.png' className='shadow-md' height={200} width={200} alt='certificates'/>
                 <Image src='/certificate.png' className='shadow-md' height={200} width={200} alt='certificates'/>
                 <Image src='/certificate.png' className='shadow-md' height={200} width={200} alt='certificates'/>
