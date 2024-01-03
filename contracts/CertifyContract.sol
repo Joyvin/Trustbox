@@ -1,9 +1,10 @@
-pragma solidity ^0.8.0;
+//SPDX-License-Identifier:MIT
+pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
+contract CertifyContract {
+    constructor() {}
 
-contract CertificateHasher {
-    using EnumerableSet for EnumerableSet.Bytes32Set;
+    event Secured(bytes32 hash, address owner);
 
     struct Certificate {
         address owner;
@@ -15,20 +16,20 @@ contract CertificateHasher {
     }
 
     mapping(bytes32 => Certificate) public certificates;
-    mapping(address => Certificate[]) public ownedBy;
-    EnumerableSet.Bytes32Set private certificateHashes;
+    mapping(address => string[]) public ownedBy;
 
     function hashCertificate(
         string memory base64Certificate,
-        uint256 memory expiresOn,
+        uint256 expiresOn,
         string memory name,
         string memory desc,
-        address memory owner
+        address owner,
+        string memory link
     ) public {
         bytes memory certificate = bytes(base64Certificate);
         bytes32 certificateHash = keccak256(certificate);
 
-        Certificate newCerty = Certificate(
+        certificates[certificateHash] = Certificate(
             owner,
             msg.sender,
             block.timestamp,
@@ -36,19 +37,23 @@ contract CertificateHasher {
             name,
             desc
         );
+        ownedBy[owner].push(link);
 
-        certificates[certificateHash] = newCerty;
-        certificateHashes.add(certificateHash);
-        ownedBy[owner].push(newCerty);
+        emit Secured(certificateHash, owner);
     }
 
     function containsCertificateHash(
-        bytes32 certificateHash
+        string memory base64Certificate
     ) public view returns (bool) {
-        return certificateHashes.contains(certificateHash);
+        bytes memory certificate = bytes(base64Certificate);
+        bytes32 certificateHash = keccak256(certificate);
+
+        return certificates[certificateHash].owner != address(0);
     }
 
-    function getUsersCertificate(address memory user) {
+    function getUsersCertificate(
+        address user
+    ) public returns (string[] memory) {
         return ownedBy[user];
     }
 }
