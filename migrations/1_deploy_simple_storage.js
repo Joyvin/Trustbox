@@ -1,5 +1,5 @@
-const SimpleStorage = artifacts.require("SimpleStorage");
+const CertifyContract = artifacts.require("CertifyContract");
 
 module.exports = function (deployer) {
-  deployer.deploy(SimpleStorage);
+	deployer.deploy(CertifyContract);
 };
