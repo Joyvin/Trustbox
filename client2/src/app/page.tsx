@@ -1,6 +1,5 @@
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
-import Navbar from "./_components/Navbar";
 import Hero from "./_components/Hero";
 import Subhero from "./_components/Subhero";
 
@@ -10,7 +9,6 @@ export default async function Home() {
 
   return (
     <>
-    <Navbar/>
     <Hero/>
     <Subhero/>
     </>
