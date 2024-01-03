@@ -7,7 +7,7 @@ const Assign = () => {
     <div>
       <div className='md:w-[80%] mx-auto'>
         <div className='grid md:grid-cols-3 gap-3'>
-          <Image src='/Cert.png' height={500} width={1000} alt='certificate' className='col-span-2 rounded-md shadow-md border-2 border-white' />
+          <Image src='/certificate.png' height={500} width={1000} alt='certificate' className='col-span-2 rounded-md shadow-md border-2 border-white' />
           <div>
             <h3 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-3'>Add an Excel to Create certificates with different participants</h3>
             <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 my-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
