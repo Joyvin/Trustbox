@@ -16,11 +16,6 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-import { headers } from 'next/headers';
-const headersList = headers();
-  // read the custom x-url header
-  const header_url = headersList.get('x-url') || "";
-  console.log(headersList.get)
 export default function RootLayout({
   children,
 }: {
