@@ -10,5 +10,5 @@ export async function hasRole(userId: string): Promise<string | null> {
   });
 
   // If the user was found, return their role. Otherwise, return null.
-  return user ? (user.role as string | null) : null;
+  return user ? user.role : null;
 }

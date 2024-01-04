@@ -1,14 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import type { FormEvent } from "react";
+import { useSession } from "next-auth/react";
+import { createOrganization } from "~/app/api/isOrganizer";
+
+// Define the type for the result of the createOrganization function
+type CreateOrganizationResult = string | null;
 
 const OrganizationForm: React.FC = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const { data: session, status } = useSession();
 
-  const handleSubmit = (event: FormEvent) => {
+  const handleSubmit = async (
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
     event.preventDefault();
-    // Handle form submission here
+
+    if (status === "authenticated") {
+      const result = (await createOrganization(
+        session.user.id,
+        name,
+        email,
+      )) as CreateOrganizationResult;
+      console.log(result);
+    }
   };
 
   return (
