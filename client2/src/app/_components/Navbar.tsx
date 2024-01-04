@@ -5,14 +5,20 @@ import React, { useState } from "react";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 import { hasRole } from "../api/hasRole";
+import {redirect} from "next/navigation";
 
 const Navbar = async () => {
   const hello = await api.post.hello.query({ text: "from tRPC" });
   const session = await getServerAuthSession();
 
   let role = null;
+
   if (session && typeof session.user.name === "string") {
     role = await hasRole(session.user.id);
+    if(role === "unset"){
+      
+      redirect("/get-started")
+    }
   }
 
   // const [userType, setUserType] = useState(false);

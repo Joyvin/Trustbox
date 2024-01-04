@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
-import Navbar from "./_components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +16,11 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+import { headers } from 'next/headers';
+const headersList = headers();
+  // read the custom x-url header
+  const header_url = headersList.get('x-url') || "";
+  console.log(headersList.get)
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
         <TRPCReactProvider cookies={cookies().toString()}>
-          <Navbar/>
           {children}
         </TRPCReactProvider>
       </body>

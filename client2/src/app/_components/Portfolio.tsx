@@ -5,27 +5,23 @@ import React from "react";
 const Portfolio = () => {
   return (
     <div className="mx-auto w-[70%]">
-      <div className="flex max-w-sm flex-row rounded-lg bg-white">
-        <div className="flex flex-col items-center py-10">
+      <div className="flex flex-row rounded-lg bg-white">
+        <div className="flex flex-row gap-10 items-center pt-10">
           <Image
-            className="mb-3 h-24 w-24 rounded-full shadow-lg"
+            className="mb-3 rounded-full shadow-lg"
             src="/userimg.jpg"
-            height={24}
-            width={24}
+            height={180}
+            width={180}
             alt="User image"
           />
-          <h5 className="mt-5 text-xl font-medium text-gray-900 dark:text-white">
+          <div className="min-w-md w-full">
+          <h5 className="mt-5 text-5xl w-full font-bold text-gray-900 dark:text-white">
             Bonnie Green
           </h5>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <span className="text-lg text-gray-500 dark:text-gray-400">
             Visual Designer
           </span>
-        </div>
-      </div>
-
-      {/* <Image src='/userimg.jpg' className='m-10 shadow-md rounded-full' width={350} height={350} alt='User_image'/> */}
-      <div className="pb-10 ">
-        <h4 className="mb-1 text-lg tracking-tight text-gray-500 dark:text-white">
+          <h4 className="mb-1 text-lg tracking-tight text-gray-500 dark:text-white">
           Bio :
         </h4>
         <p className="text-md  mb-3 tracking-tight text-gray-900 dark:text-white">
@@ -34,6 +30,12 @@ const Portfolio = () => {
           consequatur aliquid, saepe accusantium eveniet, dolore laborum
           perspiciatis ea ullam, debitis magni rem?
         </p>
+          </div>
+        </div>
+      </div>
+
+      {/* <Image src='/userimg.jpg' className='m-10 shadow-md rounded-full' width={350} height={350} alt='User_image'/> */}
+      <div className="pb-10 ">
         <div className="mt-4 flex gap-3 md:mt-6">
           <a
             href="#"

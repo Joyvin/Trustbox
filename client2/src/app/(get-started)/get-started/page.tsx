@@ -13,7 +13,7 @@ export default async function Page() {
         </Link>
       </div>
       <div className="flex w-1/3 flex-col items-center justify-center rounded-xl bg-green-200 p-10">
-        <Link href="user">
+        <Link href="/">
           <User size={48} />
 
           <h2 className="mt-4 text-2xl font-bold">Personal</h2>

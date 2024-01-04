@@ -1,4 +1,4 @@
-import { FolderClosed } from "lucide-react";
+import { ChevronRightCircle, FolderClosed } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { getServerAuthSession } from "~/server/auth";
@@ -154,26 +154,26 @@ const Subhero = async() => {
           }}
         >
           <div className="mx-auto w-[80%]">
-            <h1 className="md:mb-3 mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h1 className="md:mb-3 mb-4 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               Why your Organization should create certificates with Blockchain
             </h1>
             <div className="mx-auto grid w-[60%] gap-3 py-4 md:grid-cols-3">
               <div className="md:border-r border-gray-200 ">
-                <h2 className="text-4xl font-extrabold">1</h2>
+                <h2 className="text-7xl font-extrabold">1</h2>
                 <h3 className="mb-3 text-xl tracking-tight text-gray-900 dark:text-white">
-                  Gains Credibility
+                  Transparency
                 </h3>
               </div>
               <div className="md:ml-5 md:text-black text-white">
-                <h2 className="text-4xl font-extrabold">2</h2>
+                <h2 className="text-7xl font-extrabold">2</h2>
                 <h3 className="mb-3 text-xl tracking-tight">
-                  Gains Credibility
+                  Trust
                 </h3>
               </div>
               <div className="md:border-l border-gray-200 md:pl-7 md:text-black text-white">
-                <h2 className="text-4xl font-extrabold">3</h2>
+                <h2 className="text-7xl font-extrabold">3</h2>
                 <h3 className="mb-3 text-xl tracking-tigh">
-                  Gains Credibility
+                  Integrity
                 </h3>
               </div>
             </div>
@@ -196,7 +196,11 @@ const Subhero = async() => {
           <h1 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Beat Forgers using High End Blockchain Security
           </h1>
-          <div className="flex flex-row gap-3 overflow-x-auto">
+          <div className="relative">
+          <div className=" flex flex-row gap-3 overflow-x-auto">
+            <a href="#scroll">
+            <ChevronRightCircle size={40} className="text-white shadow-md absolute bottom-16 -right-7"/>
+            </a>
             <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Create Certificates with Trustbox Editor
@@ -237,7 +241,7 @@ const Subhero = async() => {
               </p>
             </div>
 
-            <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div id="scroll" className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Certificates are verified with your Organization Name
               </h5>
@@ -246,6 +250,7 @@ const Subhero = async() => {
                 so far, in reverse chronological order.
               </p>
             </div>
+          </div>
           </div>
         </div>
       </div>

@@ -7,11 +7,11 @@ const Verify = () => {
         <div>
             <Image src='/Cert.png' width={2000} height={1000} alt='certificate' />
             <div className='w-[80%] mx-auto'>
-                <h1 className='text-2xl pt-5 font-bold tracking-tight text-gray-900 dark:text-white mb-3'>Verify Your Certificates</h1>
+                <h1 className='text-3xl pt-5 font-bold tracking-tight text-gray-900 dark:text-white mb-3'>Verify Your Certificates</h1>
                 <div className='grid md:grid-cols-2 '>
-                    <div className="md:flex items-center justify-center">
-                        <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-3'>Verify by Upload</h1>
-                        <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 my-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <div className="md:m-5 md:mx-0 items-center justify-center">
+                        <h1 className='text-2xl font-bold tracking-tight text-gray-900 dark:text-white md:mx-3 md:ml-0 my-2'>Verify by Upload</h1>
+                        <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-60 border-2 my-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                             <div className="flex flex-col items-center justify-center py-10">
                                 <UploadCloud />
                                 <p className="mb-2 text-sm text-gray-500 dark:text-gray-400"><span className="font-semibold">Click to upload</span> or drag and drop</p>

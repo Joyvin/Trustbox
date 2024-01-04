@@ -64,10 +64,19 @@ model User {
 }
 
 model Organization {
-    id    String @id @default(cuid())
-    name  String
-    email String @unique
-    users User[]
+    id       String     @id @default(cuid())
+    name     String
+    email    String     @unique
+    users    User[]
+    template Template[]
+}
+
+model Template {
+    id             String        @id @default(cuid())
+    name           String
+    json           String
+    organization   Organization? @relation(fields: [organizationId], references: [id])
+    organizationId String?
 }
 
 model VerificationToken {
