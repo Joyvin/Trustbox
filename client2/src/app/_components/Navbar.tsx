@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 import { hasRole } from "../api/hasRole";
-import {redirect} from "next/navigation";
+import { redirect } from "next/navigation";
 
 const Navbar = async () => {
   const hello = await api.post.hello.query({ text: "from tRPC" });
@@ -15,9 +15,8 @@ const Navbar = async () => {
 
   if (session && typeof session.user.name === "string") {
     role = await hasRole(session.user.id);
-    if(role === "unset"){
-      
-      redirect("/get-started")
+    if (role === "unset") {
+      redirect("/get-started");
     }
   }
 
@@ -48,6 +47,16 @@ const Navbar = async () => {
                 className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
               >
                 Get Started
+              </Link>
+            )}
+          </ul>
+          <ul className="flex flex-row">
+            {role === "organizer" && (
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
+              >
+                View Templates
               </Link>
             )}
           </ul>
@@ -124,14 +133,14 @@ const Navbar = async () => {
                   </button>
                 ) : (
                   <>
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
-                  >
-                    <User2 />
-                    Sign In
-                  </button>
-                   {/* {userType ? (
+                    <button
+                      type="button"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
+                    >
+                      <User2 />
+                      Sign In
+                    </button>
+                    {/* {userType ? (
 
                     <ul className="w-48 absolute rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
                       <li className="w-full rounded-t-lg border-b border-gray-200 px-4 py-2 dark:border-gray-600">
@@ -142,7 +151,7 @@ const Navbar = async () => {
                       </li>
                     </ul>
                     ) : ''} */}
-                    </>
+                  </>
                 )}
               </Link>
             </ul>
