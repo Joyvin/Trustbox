@@ -2,11 +2,14 @@
 import { FileSearch, UploadCloud } from "lucide-react";
 import Image from "next/image";
 import React, { useState, ChangeEvent } from "react";
+import { FileBarChart2 } from "lucide-react";
 
 const Verify = () => {
   const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState(false);
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setStatus(true);
     const file = event.target.files?.[0];
     if (file) {
       const fileName = file.name;
@@ -51,12 +54,21 @@ const Verify = () => {
                   SVG, PNG, JPG or GIF (MAX. 800x400px)
                 </p>
               </div>
-              <input
-                id="dropzone-file"
-                type="file"
-                className="hidden"
-                onChange={handleFileChange}
-              />
+              {!status ? (
+                <input
+                  id="dropzone-file"
+                  type="file"
+                  className="hidden"
+                  onChange={handleFileChange}
+                />
+              ) : (
+                <div className="card items center my-5 flex p-3 shadow">
+                  <span className="text-success mr-2">
+                    <FileBarChart2 />
+                  </span>{" "}
+                  File Added!
+                </div>
+              )}
             </label>
             <p style={messageStyle}>{message}</p>
           </div>
