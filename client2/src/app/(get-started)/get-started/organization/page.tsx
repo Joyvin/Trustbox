@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import type { FormEvent } from "react";
 import { createOrganization } from "~/app/api/isOrganizer";
 import { uid } from "~/app/api/auths";
+import { useRouter } from "next/navigation";
 // Define the type for the result of the createOrganization function
 type CreateOrganizationResult = string | null;
 
 const OrganizationForm: React.FC = () => {
+  const router = useRouter()
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
@@ -24,54 +26,54 @@ const OrganizationForm: React.FC = () => {
         name,
         email,
       )) as CreateOrganizationResult;
+    router.push("/")
       console.log(result);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto mt-5 w-full max-w-lg">
-      <div className="-mx-3 mb-6 flex flex-wrap">
-        <div className="w-full px-3">
+    <form onSubmit={handleSubmit} className="mx-auto mt-5 w-[50%]">
+      <h2 className="py-10  mb-3 text-2xl font-bold tracking-tight text-gray-900 text-center dark:text-white">To Register yourself as a Organization on Trustbox</h2>
+        <div className="mb-5">
           <label
-            className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
             htmlFor="grid-name"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Organization Name
           </label>
           <input
-            className="mb-3 block w-full appearance-none rounded border bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:bg-white focus:outline-none"
             id="grid-name"
             type="text"
             placeholder="Enter name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            required
           />
         </div>
-        <div className="mt-6 w-full px-3">
+        <div className="mb-5">
           <label
-            className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
             htmlFor="grid-email"
+            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Email
           </label>
           <input
-            className="mb-3 block w-full appearance-none rounded border bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:bg-white focus:outline-none"
             id="grid-email"
             type="email"
             placeholder="Enter email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            required
           />
         </div>
-        <div className="mt-6 w-full px-3">
-          <button
-            type="submit"
-            className="focus:shadow-outline w-full rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
-          >
-            Create Organization
-          </button>
-        </div>
-      </div>
+        <button
+          type="submit"
+          className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Create Organization
+        </button>
     </form>
   );
 };

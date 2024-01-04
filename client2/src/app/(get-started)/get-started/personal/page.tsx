@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { assignRole } from "~/app/api/isUser";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { CheckCircle, XCircle } from "lucide-react";
 
 const ConfirmationDialog: React.FC = () => {
@@ -9,6 +9,8 @@ const ConfirmationDialog: React.FC = () => {
 
   const handleYesClick = async () => {
     await assignRole();
+    await router.push("/")
+    router.refresh()
   };
 
   const handleNoClick = async () => {

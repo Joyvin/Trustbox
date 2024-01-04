@@ -3,10 +3,10 @@
 import { db } from "~/server/db";
 import type {Template} from "@prisma/client"
 
-export async function storeJson(jsondata: string, organizationId: string): Promise<string | null> {
+export async function storeJson(jsondata: string, templateid: string): Promise<string | null> {
   // Fetch the user from the database using their id
   const template: Template | null = await db.template.findUnique({
-    where: { id: organizationId },
+    where: { id: templateid },
   });
 
   // If the user was found, return their role. Otherwise, return null.
