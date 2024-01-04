@@ -1,6 +1,7 @@
+// "use client";
 import { CheckCircle, Package, Phone, User2 } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 import { hasRole } from "../api/hasRole";
@@ -13,6 +14,12 @@ const Navbar = async () => {
   if (session && typeof session.user.name === "string") {
     role = await hasRole(session.user.id);
   }
+
+  // const [userType, setUserType] = useState(false);
+
+  // const toggleUserType = () => {
+  //   setUserType(!userType);
+  // }
 
   return (
     <div>
@@ -32,9 +39,9 @@ const Navbar = async () => {
             {role === "unset" && (
               <Link
                 href="/get-started"
-                className="block rounded px-3 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
               >
-                get-started
+                Get Started
               </Link>
             )}
           </ul>
@@ -60,13 +67,27 @@ const Navbar = async () => {
                   Sign Out
                 </button>
               ) : (
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
-                >
-                  <User2 />
-                  Sign In
-                </button>
+                <>
+                  <button
+                    type="button"
+                    className="relative inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
+                  >
+                    <User2 />
+                    Sign In
+                  </button>
+
+                  {/* {userType ? (
+
+                  <ul className="w-48 absolute rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
+                    <li className="w-full rounded-t-lg border-b border-gray-200 px-4 py-2 dark:border-gray-600">
+                      Sign In as a User
+                    </li>
+                    <li className="w-full border-b border-gray-200 px-4 py-2 dark:border-gray-600">
+                      Sign In as an Organization
+                    </li>
+                  </ul>
+                  ) : ''} */}
+                </>
               )}
             </Link>
           </ul>
@@ -96,6 +117,7 @@ const Navbar = async () => {
                     Sign Out
                   </button>
                 ) : (
+                  <>
                   <button
                     type="button"
                     className="inline-flex items-center gap-2 rounded-lg bg-[#24292F] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#24292F]/90 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-gray-500 "
@@ -103,6 +125,18 @@ const Navbar = async () => {
                     <User2 />
                     Sign In
                   </button>
+                   {/* {userType ? (
+
+                    <ul className="w-48 absolute rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
+                      <li className="w-full rounded-t-lg border-b border-gray-200 px-4 py-2 dark:border-gray-600">
+                        Sign In as a User
+                      </li>
+                      <li className="w-full border-b border-gray-200 px-4 py-2 dark:border-gray-600">
+                        Sign In as an Organization
+                      </li>
+                    </ul>
+                    ) : ''} */}
+                    </>
                 )}
               </Link>
             </ul>
