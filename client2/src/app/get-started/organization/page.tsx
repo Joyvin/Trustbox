@@ -1,17 +1,62 @@
-import React from "react";
-import { Building, User } from "lucide-react";
+"use client";
+import React, { useState } from "react";
+import type { FormEvent } from "react";
 
-export default function Page() {
+const OrganizationForm: React.FC = () => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    // Handle form submission here
+  };
+
   return (
-    <div className="flex justify-around p-10">
-      <div className="flex w-1/3 flex-col items-center justify-center rounded-xl bg-blue-200 p-10">
-        <Building size={48} />
-        <h2 className="mt-4 text-2xl font-bold">Organization</h2>
+    <form onSubmit={handleSubmit} className="mx-auto mt-5 w-full max-w-lg">
+      <div className="-mx-3 mb-6 flex flex-wrap">
+        <div className="w-full px-3">
+          <label
+            className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+            htmlFor="grid-name"
+          >
+            Organization Name
+          </label>
+          <input
+            className="mb-3 block w-full appearance-none rounded border bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+            id="grid-name"
+            type="text"
+            placeholder="Enter name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+        <div className="mt-6 w-full px-3">
+          <label
+            className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-700"
+            htmlFor="grid-email"
+          >
+            Email
+          </label>
+          <input
+            className="mb-3 block w-full appearance-none rounded border bg-gray-200 px-4 py-3 leading-tight text-gray-700 focus:bg-white focus:outline-none"
+            id="grid-email"
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="mt-6 w-full px-3">
+          <button
+            type="submit"
+            className="focus:shadow-outline w-full rounded bg-purple-500 px-4 py-2 font-bold text-white shadow hover:bg-purple-400 focus:outline-none"
+          >
+            Create Organization
+          </button>
+        </div>
       </div>
-      <div className="flex w-1/3 flex-col items-center justify-center rounded-xl bg-green-200 p-10">
-        <User size={48} />
-        <h2 className="mt-4 text-2xl font-bold">Personal</h2>
-      </div>
-    </div>
+    </form>
   );
-}
+};
+
+export default OrganizationForm;
