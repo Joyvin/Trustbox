@@ -38,7 +38,7 @@ const Navbar = async () => {
             <Package />
             {/* <Image src='' height={25} width={25} alt="logo"/> */}
             <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">
-              TrustBox
+              CertSecure
             </span>
           </a>
           <ul className="flex flex-row">

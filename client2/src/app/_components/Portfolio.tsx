@@ -16,19 +16,18 @@ const Portfolio = () => {
           />
           <div className="min-w-md w-full">
           <h5 className="mt-5 text-5xl w-full font-bold text-gray-900 dark:text-white">
-            Bonnie Green
+            Jayden Colaco
           </h5>
           <span className="text-lg text-gray-500 dark:text-gray-400">
-            Visual Designer
+            Frontend Designer
           </span>
           <h4 className="mb-1 text-lg tracking-tight text-gray-500 dark:text-white">
           Bio :
         </h4>
         <p className="text-md  mb-3 tracking-tight text-gray-900 dark:text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          provident nostrum architecto quod pariatur harum odit? Minus
-          consequatur aliquid, saepe accusantium eveniet, dolore laborum
-          perspiciatis ea ullam, debitis magni rem?
+        I am Jayden Colaco, a first year engineering student. On my way to find an idea that would change the world. I have thoroughly enjoyed the participation in these hackathons during which I have worked on small projects to gain experience. I am always looking for new challenges and opportunities to learn and grow as a developer.
+
+I am excited to share my work and experiences on Devfolio and to connect with other like-minded developers. Feel free to reach out to me if you have any questions or just want to chat about tech!
         </p>
           </div>
         </div>
@@ -51,85 +50,57 @@ const Portfolio = () => {
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+            src="/grp-cert/cert1.png"
             alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+            src="/grp-cert/cert2.jpeg"
             alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
-            alt=""
+            src="/grp-cert/cert3.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
-            alt=""
+            src="/grp-cert/cert4.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
-            alt=""
+            src="/grp-cert/cert5.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
-            alt=""
+            src="/grp-cert/cert6.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
-            alt=""
+            src="/grp-cert/cert7.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
-            alt=""
+            src="/grp-cert/cert8.jpeg"            alt=""
           />
         </div>
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
-            alt=""
+            src="/grp-cert/cert9.png"            alt=""
           />
         </div>
       </div>

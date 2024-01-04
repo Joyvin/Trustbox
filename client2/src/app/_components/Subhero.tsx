@@ -53,22 +53,21 @@ const Subhero = async () => {
         </div>
         {/* For Both */}
         <div className="">
-          <div className="mx-auto w-[80%] py-10">
+        <div className="mx-auto w-[80%] py-10">
             <h1 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Beat Forgers using High End Blockchain Security
+              Beat Forgery using High End Blockchain Security
             </h1>
             <div className="relative">
               <div className=" flex flex-row gap-3 overflow-x-auto">
                 <a href="#scroll">
-                  <ChevronRightCircle size={40} className="text-black absolute bottom-16 -right-7" />
+                  <ChevronRightCircle size={40} className="text-white shadow-md absolute bottom-16 -right-7" />
                 </a>
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Create Certificates with Trustbox Editor
+                    Create Certificates with CertSecure Editor
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Utilize CertSecure editor for secure certificate creation. Advanced features and blockchain integration ensure tamper-proof certificates, resilient against forgery.
                   </p>
                 </div>
 
@@ -77,8 +76,7 @@ const Subhero = async () => {
                     Add your own Blockchain QR
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the second step, personalize your certificates by adding a unique blockchain QR code. This feature enhances security, enabling quick verification and thwarting potential forgeries.
                   </p>
                 </div>
 
@@ -87,18 +85,16 @@ const Subhero = async () => {
                     Add your list of Participants / Students
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In step 3, seamlessly input your participants or students into CertSecure. This ensures precise and secure distribution of certificates, optimizing the process for acknowledgment.
                   </p>
                 </div>
 
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Send the Certificates
+                    Send the Certificates with Email
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Step 4 involves sending the certificates to recipients via email while leveraging the power of blockchain technology for added security.
                   </p>
                 </div>
 
@@ -107,8 +103,7 @@ const Subhero = async () => {
                     Certificates are verified with your Organization Name
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the fifth step, certificates are meticulously verified with your organization's name, establishing a trusted link between the document and your institution, enhancing overall authenticity.
                   </p>
                 </div>
               </div>
@@ -138,9 +133,7 @@ const Subhero = async () => {
                   Create / Upload a Certificate in our Editor
                 </h3>
                 <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                  Get access to over 20+ pages including a dashboard layout,
-                  charts, kanban board, calendar, and pre-order E-commerce &
-                  Marketing pages.
+                In our user-centric platform, individuals wield the ability to create and upload their certificates seamlessly through our intuitive editor.
                 </p>
                 <a
                   href="#"
@@ -173,10 +166,8 @@ const Subhero = async () => {
                   Assign a List of Participants / Students to recieve the
                   Certificate
                 </h3>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  All of the pages and components are first designed in Figma and
-                  we keep a parity between the two versions even as we update the
-                  project.
+                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                In the next step, you can effortlessly assign a list of participants or students who are to receive the certificates.
                 </p>
                 <a
                   href="/assign-certificates"
@@ -209,8 +200,7 @@ const Subhero = async () => {
                   Send the Mail of Certificates with Blockchain
                 </h3>
                 <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Get started with dozens of web components and interactive
-                  elements built on top of Tailwind CSS.
+                Step 3 involves sending the certificates to recipients via email while leveraging the power of blockchain technology for added security.
                 </p>
               </li>
             </ol>
@@ -264,7 +254,7 @@ const Subhero = async () => {
         <div className="dark bg-black">
           <div className="mx-auto w-[80%] py-10">
             <h1 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Beat Forgers using High End Blockchain Security
+              Beat Forgery using High End Blockchain Security
             </h1>
             <div className="relative">
               <div className=" flex flex-row gap-3 overflow-x-auto">
@@ -273,11 +263,10 @@ const Subhero = async () => {
                 </a>
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Create Certificates with Trustbox Editor
+                    Create Certificates with CertSecure Editor
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Utilize CertSecure editor for secure certificate creation. Advanced features and blockchain integration ensure tamper-proof certificates, resilient against forgery.
                   </p>
                 </div>
 
@@ -286,8 +275,7 @@ const Subhero = async () => {
                     Add your own Blockchain QR
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the second step, personalize your certificates by adding a unique blockchain QR code. This feature enhances security, enabling quick verification and thwarting potential forgeries.
                   </p>
                 </div>
 
@@ -296,18 +284,16 @@ const Subhero = async () => {
                     Add your list of Participants / Students
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In step 3, seamlessly input your participants or students into CertSecure. This ensures precise and secure distribution of certificates, optimizing the process for acknowledgment.
                   </p>
                 </div>
 
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Send the Certificates
+                    Send the Certificates with Email
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Step 4 involves sending the certificates to recipients via email while leveraging the power of blockchain technology for added security.
                   </p>
                 </div>
 
@@ -316,8 +302,7 @@ const Subhero = async () => {
                     Certificates are verified with your Organization Name
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the fifth step, certificates are meticulously verified with your organization's name, establishing a trusted link between the document and your institution, enhancing overall authenticity.
                   </p>
                 </div>
               </div>
@@ -331,23 +316,21 @@ const Subhero = async () => {
     return (
       <>
         {/* For Both */}
-        <div className="dark bg-black">
-          <div className="mx-auto w-[80%] py-10">
+        <div className="mx-auto w-[80%] py-10">
             <h1 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Beat Forgers using High End Blockchain Security
+              Beat Forgery using High End Blockchain Security
             </h1>
             <div className="relative">
               <div className=" flex flex-row gap-3 overflow-x-auto">
                 <a href="#scroll">
-                  <ChevronRightCircle size={40} className="text-white shadow-md absolute bottom-16 -right-7" />
+                  <ChevronRightCircle size={40} className="text-black absolute bottom-24 -right-7" />
                 </a>
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Create Certificates with Trustbox Editor
+                    Create Certificates with CertSecure Editor
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Utilize CertSecure editor for secure certificate creation. Advanced features and blockchain integration ensure tamper-proof certificates, resilient against forgery.
                   </p>
                 </div>
 
@@ -356,8 +339,7 @@ const Subhero = async () => {
                     Add your own Blockchain QR
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the second step, personalize your certificates by adding a unique blockchain QR code. This feature enhances security, enabling quick verification and thwarting potential forgeries.
                   </p>
                 </div>
 
@@ -366,18 +348,16 @@ const Subhero = async () => {
                     Add your list of Participants / Students
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In step 3, seamlessly input your participants or students into CertSecure. This ensures precise and secure distribution of certificates, optimizing the process for acknowledgment.
                   </p>
                 </div>
 
                 <div className="block md:min-w-[400px] min-w-[250px] rounded-lg border border-gray-200 bg-white p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Send the Certificates
+                    Send the Certificates with Email
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  Step 4 involves sending the certificates to recipients via email while leveraging the power of blockchain technology for added security.
                   </p>
                 </div>
 
@@ -386,14 +366,12 @@ const Subhero = async () => {
                     Certificates are verified with your Organization Name
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Here are the biggest enterprise technology acquisitions of 2021
-                    so far, in reverse chronological order.
+                  In the fifth step, certificates are meticulously verified with your organization's name, establishing a trusted link between the document and your institution, enhancing overall authenticity.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </>
     )
   }
