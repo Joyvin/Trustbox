@@ -29,9 +29,9 @@ const Navbar = async () => {
   return (
     <div>
       <nav className="bg-white dark:bg-gray-900">
-        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+        <div className="mx-auto flex max-w-screen-xl items-center justify-between p-4">
           <a
-            href="#"
+            href="/"
             className="flex items-center space-x-3 text-black rtl:space-x-reverse"
           >
             <Package />
@@ -40,7 +40,7 @@ const Navbar = async () => {
               CertSecure
             </span>
           </a>
-          <ul className="flex flex-row">
+          {/* <ul className="flex flex-row">
             {role === "unset" && (
               <Link
                 href="/get-started"
@@ -49,8 +49,8 @@ const Navbar = async () => {
                 Get Started
               </Link>
             )}
-          </ul>
-          <ul className="flex flex-row">
+          </ul> */}
+          {/* <ul className="flex flex-row">
             {role === "organizer" && (
               <Link
                 href="/portfolio"
@@ -59,7 +59,7 @@ const Navbar = async () => {
                 View Templates
               </Link>
             )}
-          </ul>
+          </ul> */}
           <ul className="flex flex-row md:hidden">
             <li>
               <a
@@ -71,7 +71,7 @@ const Navbar = async () => {
             </li>
             <Link
               href={session ? "/api/auth/signout" : "/api/auth/signin"}
-              className="block rounded px-3 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
+              className="block rounded px-1 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
             >
               {session ? (
                 <button

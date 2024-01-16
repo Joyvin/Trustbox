@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Trustbox",
-  description: "Secure Certifictes like never before",
+  title: "CertSecure",
+  description: "Securing Certificates with an Unbreakable chain",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

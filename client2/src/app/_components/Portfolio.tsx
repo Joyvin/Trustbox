@@ -3,6 +3,19 @@ import Image from "next/image";
 import React from "react";
 
 const Portfolio = () => {
+  const data = [{
+    picalt: 'cert',
+    piclink: '/grp-cert/cert3.jpeg',
+  },
+  {
+    picalt: 'cert',
+    piclink: '/grp-cert/cert3.jpeg',
+  },
+  {
+    picalt: 'cert',
+    piclink: '/grp-cert/cert3.jpeg',
+  },
+]
   return (
     <div className="mx-auto w-[70%]">
       <div className="flex flex-row rounded-lg bg-white">
@@ -47,62 +60,17 @@ I am excited to share my work and experiences on Devfolio and to connect with ot
       </div>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        {
+          data.map((item, i) => (
         <div>
           <img
             className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert1.png"
-            alt=""
+            src={item.piclink}
+            alt={item.picalt}
           />
         </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert2.jpeg"
-            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert3.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert4.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert5.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert6.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert7.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert8.jpeg"            alt=""
-          />
-        </div>
-        <div>
-          <img
-            className="h-auto max-w-full rounded-lg"
-            src="/grp-cert/cert9.png"            alt=""
-          />
-        </div>
+          ))
+        }
       </div>
     </div>
   );
